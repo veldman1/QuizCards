@@ -46,10 +46,13 @@ namespace QuizCardsConsole
 
                 if (correct)
                 {
+                    Console.WriteLine();
                     Console.WriteLine("Correct");
                 } else
                 {
+                    Console.WriteLine();
                     Console.WriteLine("Incorrect");
+                    Console.WriteLine("Correct Answer: " + model.CurrentItem.Question.CorrectAnswer);
                 }
 
                 model.AdvanceCard();

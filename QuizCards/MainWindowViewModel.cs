@@ -78,6 +78,7 @@ namespace QuizCards
         private void Submit(object parameter)
         {
             GameModel.SubmitAnswer(SelectedAnswer + 1);
+            GameModel.AdvanceCard();
             NotifyPropertyChanged("GameModel");
         }
     }

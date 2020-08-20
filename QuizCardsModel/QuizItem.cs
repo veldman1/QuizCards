@@ -56,5 +56,11 @@ namespace QuizCardsModel
         public int CorrectAnswerIndex { get; }
 
         public List<String> Choices { get; }
+
+        public string CorrectAnswer {
+            get {
+                return Choices[CorrectAnswerIndex - 1];
+            }
+        }
     }
 }

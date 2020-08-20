@@ -39,6 +39,7 @@ namespace QuizCardsTest
             Assert.AreEqual(false, model.CurrentItem.Answered);
             Assert.AreEqual(false, model.CurrentItem.Correct);
             model.SubmitAnswer(submitAnswerOne);
+            model.AdvanceCard();
 
             // Question 2
             Assert.AreEqual(GameState.Quiz, model.State);
@@ -48,10 +49,11 @@ namespace QuizCardsTest
             Assert.AreEqual(false, model.CurrentItem.Answered);
             Assert.AreEqual(false, model.CurrentItem.Correct);
             model.SubmitAnswer(submitAnswerTwo);
+            model.AdvanceCard();
 
             // Score
             Assert.AreEqual(GameState.Score, model.State);
-            Assert.AreEqual(numCorrect, model.CorrectCount());
+            Assert.AreEqual(numCorrect, model.CorrectCount);
         }
     }
 }
