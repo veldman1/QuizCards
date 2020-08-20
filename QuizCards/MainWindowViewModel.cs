@@ -41,6 +41,8 @@ namespace QuizCards
         public GameModel GameModel { get; set; }
 
         public ICommand SubmitCommand { get; private set; }
+        public ICommand AdvanceCommand { get; private set; }
+
         public ICommand RetryCommand { get; private set; }
         public ICommand OpenCommand { get; private set; }
 
@@ -52,6 +54,7 @@ namespace QuizCards
             SubmitCommand = new SimpleCommand(Submit);
             RetryCommand = new SimpleCommand(Retry);
             OpenCommand = new SimpleCommand(OpenNew);
+            AdvanceCommand = new SimpleCommand(AdvanceCard);
         }
 
         private void OpenNew(object obj)
@@ -78,8 +81,14 @@ namespace QuizCards
         private void Submit(object parameter)
         {
             GameModel.SubmitAnswer(SelectedAnswer + 1);
+            NotifyPropertyChanged("GameModel");
+        }
+
+        private void AdvanceCard(object obj)
+        {
             GameModel.AdvanceCard();
             NotifyPropertyChanged("GameModel");
+
         }
     }
 }

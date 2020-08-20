@@ -7,7 +7,7 @@ using System.Text;
 
 namespace QuizCardsModel
 {
-    public enum GameState { Quiz, Score }
+    public enum GameState { Quiz, Feedback, Score }
 
     public class GameModel : INotifyPropertyChanged
     {
@@ -61,6 +61,9 @@ namespace QuizCardsModel
 
             CurrentItem.Correct = correct;
             CurrentItem.Answered = true;
+
+            State = GameState.Feedback;
+
             return correct;
         }
 
@@ -71,6 +74,7 @@ namespace QuizCardsModel
             if (QuizItemListIndex < QuizItems.Count)
             {
                 CurrentItem = QuizItems[QuizItemListIndex];
+                State = GameState.Quiz;
             }
             else
             {
