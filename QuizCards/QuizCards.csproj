@@ -10,4 +10,10 @@
     <ProjectReference Include="..\QuizCardsModel\QuizCardsModel.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Quizzes\Central American Capitals.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

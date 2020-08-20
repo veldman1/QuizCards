@@ -1,0 +1,35 @@
+(1) What is the capital of Belize?
+1. Belmopan
+2. Belize City
+3. San Ignacio
+1
+
+(2) What is the capital of Costa Rica?
+1. San Jose
+2. Puerto Limon
+3. Heredia
+1
+
+(3) What is the capital of El Salvador?
+1. Salvador City
+2. El Salvador
+3. San Salvador
+3
+
+(4) What is the capital of Guatemala?
+1. Belmopan
+2. Pequena Guatemala
+3. Guatemala City
+3
+
+(5) What is the capital of Nicaragua?
+1. Masaya
+2. Managua
+3. Leon
+2
+
+(6) What is the capital of Panama?
+1. Panama City
+2. Panama Beach
+3. Panamanian
+1
