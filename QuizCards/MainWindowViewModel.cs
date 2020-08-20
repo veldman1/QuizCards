@@ -60,11 +60,11 @@ namespace QuizCards
         private void OpenNew(object obj)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            // openFileDialog.InitialDirectory = "./Quizzes/";
             openFileDialog.ShowDialog();
             try
             {
                 GameModel = new GameModel(openFileDialog.FileName);
+                NotifyPropertyChanged("GameModel");
             }
             catch (Exception e)
             {
